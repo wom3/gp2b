@@ -42,8 +42,16 @@ function draw()
 	fill(0, 155, 0);
 	rect(0, floorPos_y, height, width - floorPos_y); //draw some green ground
     
+    //2. Draw tree
     
-	//Add your code here ...
+    fill(165,42,42)
+    rect(treePos_x,treePos_y,20,145);
+    fill(0,155,0)
+    triangle(treePos_x-40,treePos_y+20,treePos_x+10,treePos_y-30,treePos_x+60,treePos_y+20)
+    triangle(treePos_x-37,treePos_y,treePos_x+10,treePos_y-60,treePos_x+57,treePos_y)
+    triangle(treePos_x-32,treePos_y-22,treePos_x+10,treePos_y-60,treePos_x+52,treePos_y-22)
+    
+	//1. Draw Game character
     
     // face
     fill(222,184,135);
@@ -89,6 +97,7 @@ function draw()
     
     fill(128,0,0);
     quad(gameChar_x+3,gameChar_y-8,gameChar_x+6,gameChar_y-8,gameChar_x+9,gameChar_y,gameChar_x+2,gameChar_y)
+    
 
 }
 
