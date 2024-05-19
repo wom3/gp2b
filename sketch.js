@@ -32,6 +32,16 @@ function setup()
 
 	treePos_x = width/2;
 	treePos_y = height/2;
+    canyon = {
+        x_pos: 0,
+        width: 100 
+    }
+    
+    collectable = {
+        x_pos: 100,
+        y_pos: 100,
+        size: 50
+    }
 }
 
 function draw()
@@ -98,6 +108,17 @@ function draw()
     fill(128,0,0);
     quad(gameChar_x+3,gameChar_y-8,gameChar_x+6,gameChar_y-8,gameChar_x+9,gameChar_y,gameChar_x+2,gameChar_y)
     
+    // Draw canyon
+    
+	fill(139, 69, 19);
+	quad(canyon.x_pos+200, canyon.width+332, canyon.x_pos+300, canyon.width +332, canyon.x_pos+320, canyon.width+476, canyon.x_pos+180, canyon.width+476);
+
+	noStroke();
+	fill(255);
+    
+    // Draw collectable
+    fill(255, 215, 0);
+	ellipse(collectable.x_pos+120, collectable.y_pos+310, collectable.size, collectable.size)
 
 }
 
